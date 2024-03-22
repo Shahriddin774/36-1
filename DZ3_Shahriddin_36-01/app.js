@@ -1,43 +1,31 @@
-var arr = [34, 54, 1, 23, 678, 72, 9, 10, 5, 89, 900];
-var minNumber = arr[0];
-var maxNumber = arr[0];
+const array = [34, 54, 1, 23, 678, 72, 9, 10, 5, 89, 900];
+let smallest = array[0];
+let largest = array[0];
 
-for (var i = 1; i < arr.length; i++) {
-    var currentNumber = arr[i];
-
-    if (currentNumber < minNumber) {
-        minNumber = currentNumber;
-    } else if (currentNumber > maxNumber) {
-        maxNumber = currentNumber;
+for (let i = 1; i < array.length; i++) {
+    if (array[i] < smallest) {
+        smallest = array[i];
+    }
+    if (array[i] > largest) {
+        largest = array[i];
     }
 }
 
-console.log("Наименьшее число: " + minNumber);
-console.log("Наибольшее число: " + maxNumber);
-var userInput = prompt("Введите число для таблицы умножения:");
-var userNumber = parseInt(userInput);
-
-for (var i = 1; i <= 10; i++) {
-    var result = i * userNumber;
-    console.log(i + " * " + userNumber + " = " + result);
+console.log("Наименьшее число:", smallest);
+console.log("Наибольшее число:", largest);
+let userNum = prompt("введите число")
+let userInp = parseInt(userNum)
+for (let i = 1; i <=10; i++){
+    let result = userInp * i
+    console.log(userInp + "*" + i + "=" + result)
 }
 function countVowels(str) {
-    var vowels = "аеёиоуыэюяaeiouyAEIOUY";
-    var count = 0;
+    const vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'a', 'e', 'i', 'o', 'u'];
+    let count = 0;
 
-    for (var i = 0; i < str.length; i++) {
-        var char = str[i];
-
-        if (
-            char === 'а' || char === 'е' || char === 'ё' ||
-            char === 'и' || char === 'о' || char === 'у' ||
-            char === 'ы' || char === 'э' || char === 'ю' ||
-            char === 'я' || char === 'a' || char === 'e' ||
-            char === 'i' || char === 'o' || char === 'u' ||
-            char === 'y' || char === 'A' || char === 'E' ||
-            char === 'I' || char === 'O' || char === 'U' ||
-            char === 'Y'
-        ) {
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i].toLowerCase(); // Преобразование символа к нижнему регистру для унификации сравнения
+        if (vowels.includes(char)) {
             count++;
         }
     }
@@ -45,6 +33,6 @@ function countVowels(str) {
     return count;
 }
 
-var userWord = prompt("Введите слово для подсчета гласных:");
-var result = countVowels(userWord);
-console.log("Количество гласных: " + result);
+const str = "яблоко";
+const vowelsCount = countVowels(str);
+console.log(`Количество гласных в "${str}": ${vowelsCount}`);

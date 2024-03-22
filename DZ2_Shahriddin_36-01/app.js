@@ -1,5 +1,5 @@
-var userInput = prompt("Введите язык программирования:");
-var programmingLanguage = userInput.toLowerCase();
+const userInput = prompt("Введите язык программирования:");
+const programmingLanguage = userInput.toLowerCase();
 switch (programmingLanguage) {
     case "javascript":
         alert("FrontEnd")
@@ -20,21 +20,20 @@ switch (programmingLanguage) {
         alert("error")
         break
 }
-var student = {
-    name: "Franklin Saint",
-    age: 19,
-    major: "business management",
+let student = {
+    name:"Franklin Saint",
+    age:18,
+    major:"business"
 }
 console.log(Object.values(student))
-student.grades = [5,4,5,3,4,5]
-student["age"] = 20
-student.grades[6] = 4
+student.grades = [3,4,5,6,7]
+student["age"] = 19
 console.log(Object.values(student))
-var sum = 0
-for (var i = 1; i <= 5; i++) {
-    sum += i
+let num = 0
+for (let i = 1; i <= 5;){
+    num += i
+    console.log(i)
 }
-console.log("Сумма чисел от 1 до 5: " + sum)
-for (var i = 0; i <= 10; i+=2){
+for (let i = 0; i <= 10; i+=2){
     console.log(i)
 }

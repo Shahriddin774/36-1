@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: silver;
+    padding: 20px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+h2{
+    color: darkblue;
+}
+input, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+
+}
+form{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+button{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+article {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    padding: 15px;
+    box-sizing: border-box;
+}
+p{
+    color: cadetblue;
+}
